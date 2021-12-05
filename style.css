@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(24, 25, 28);
+    color: white;
+}
+
+#title {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.grid-container {
+    display: grid;
+    font-size: 50px;
+    grid-template-columns: repeat(13, minmax(0, 1.13em));
+    grid-template-rows: repeat(6, minmax(0, 1.13em));
+    user-select: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#current-emoji,
+#brush-emoji {
+    font-weight: 100;
+}
+
+emoji-picker {
+    margin: auto;
+}
+
+input {
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    display: block;
+    width: 650px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    border: 0;
+}
+
+@media (max-width: 1200px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
