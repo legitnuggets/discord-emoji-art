@@ -1,110 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Dismoji</title>
-    </head>
-    <body>
-        <!-- <div id="title-container">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/c37b0fe0b4.js" crossorigin="anonymous"></script>
+    <title>Discord Emoji Art</title>
+</head>
+
+<body>
+    <!-- <div id="title-container">
             <h1 id="title">DISMOJI WAS TAKEN</h1>
         </div> -->
-        <div class="flex-container">
-            <div id="emoji-picker-container">
-                <h2>
-                    1- Pick an emoji
-                    <span id="current-emoji"></span>
-                </h2>
+    <nav>
+        <div class="nav-right">
+            <div id="toggle" class="dark">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
             </div>
-            <div id="canvas-container">
-                <h2>2- Start drawing <span id="brush-emoji">🖌️</span></h2>
-                <div class="grid-container">
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                    <div class="grid-item">⬛</div>
-                </div>
+
+            <a href="https://github.com/legitnuggets/discord-emoji-art">
+                <i class="fab fa-github-square"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="flex-container">
+        <div id="emoji-picker-container">
+            <h2 class="dark">
+                1- Pick an emoji
+                <span id="current-emoji"></span>
+            </h2>
+        </div>
+        <div id="canvas-container">
+            <h2 class="dark">2- Start drawing <span id="brush-emoji">🖌️</span></h2>
+            <div class="grid-container">
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
+                <div class="grid-item">⬛</div>
             </div>
         </div>
-        <div id="result-container">
-            <h2>3- Copy and Paste to Bio</h2>
-            <input id="result-input" type="text" value="" />
-        </div>
-        <script src="main.js"></script>
-    </body>
+    </div>
+    <div id="result-container">
+        <h2 class="dark">3- Copy and Paste to Bio</h2>
+        <input id="result-input" type="text" value="" />
+    </div>
+    <script src="main.js"></script>
+</body>
+
 </html>
