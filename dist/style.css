@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-discord: rgb(24, 25, 28);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--color-discord);
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    font-size: 50px;
+    grid-template-columns: repeat(13, minmax(0, 1.12em));
+    grid-template-rows: repeat(6, minmax(0, 1.12em));
+    user-select: none;
+}
+
+#current-emoji,
+#brush-emoji {
+    font-weight: 100;
+}
+
+emoji-picker {
+    margin: auto;
+}
+
+input {
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    display: block;
+    width: 650px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid var(--color-discord);
+}
+
+@media (max-width: 1200px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    /* padding: 10px; */
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+nav.light {
+    background-color: white;
+}
+
+nav.dark {
+    background-color: var(--color-discord);
+}
+
+.nav-right {
+    text-align: right;
+    width: fit-content;
+    margin-left: auto;
+}
+
+/* .fa-sun,
+.fa-moon {
+    font-size: 25px;
+    background-color: white;
+    color: var(--color-discord);
+     color: white;
+    padding: 8px;
+    border-radius: 50%;
+    vertical-align: bottom;
+} */
+
+.fa-github-square {
+    color: white;
+    font-size: 50px;
+    vertical-align: bottom;
+    margin-bottom: -5px;
+    margin-left: 10px;
+}
+
+#toggle {
+    width: fit-content;
+    border-radius: 25%/50%;
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#toggle i {
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/*dark mode*/
+#toggle.dark {
+    background-color: white;
+    padding: 3px;
+    border: 1px solid white;
+}
+
+#toggle.dark .fa-sun {
+    color: var(--color-discord);
+    background-color: var(--color-discord);
+}
+
+#toggle.dark .fa-moon {
+    color: var(--color-discord);
+    background-color: white;
+}
+
+/*light mode*/
+#toggle.light {
+    background-color: var(--color-discord);
+    padding: 3px;
+    border: 1px solid var(--color-discord);
+}
+
+#toggle.light .fa-sun {
+    background-color: var(--color-discord);
+    color: white;
+}
+
+#toggle.light .fa-moon {
+    color: white;
+    background-color: white;
+}
+
+.fa-github-square.dark {
+    color: white;
+}
+
+.fa-github-square.light {
+    color: var(--color-discord);
+}
+
+body.dark {
+    background-color: var(--color-discord);
+}
+
+body.light {
+    background-color: white;
+}
+
+h2.dark {
+    color: white;
+}
+
+h2.light {
+    color: var(--color-discord);
+}
